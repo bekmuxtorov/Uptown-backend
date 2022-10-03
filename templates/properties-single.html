@@ -65,10 +65,10 @@
       	<div class="row justify-content-center">
       		<div class="col-md-12">
       			<div class="property-details">
-      				<div class="img" style="background-image: url('{% static "images/work-1.jpg" %}' );"></div>
+      				<div class="img" style="background-image: url('{{ choose_work.image.url }}' );"></div>
       				<div class="text text-center">
-      					<span class="subheading">Oakland</span>
-      					<h2>The Blue Sky Home</h2>
+      					<span class="subheading">{{ choose_work.location }}</span>
+      					<h2>{{ choose_work.name }}</h2>
       				</div>
       			</div>
       		</div>
@@ -96,9 +96,9 @@
 						    	<div class="row">
 						    		<div class="col-md-4">
 						    			<ul class="features">
-						    				<li class="check"><span class="ion-ios-checkmark"></span>Lot Area: 1,250 SQ FT</li>
-						    				<li class="check"><span class="ion-ios-checkmark"></span>Bed Rooms: 4</li>
-						    				<li class="check"><span class="ion-ios-checkmark"></span>Bath Rooms: 4</li>
+						    				<li class="check"><span class="ion-ios-checkmark"></span>Lot Area: {{ choose_work.area }} SQ FT</li>
+						    				<li class="check"><span class="ion-ios-checkmark"></span>Bed Rooms: {{ choose_work.bath_room }}</li>
+						    				<li class="check"><span class="ion-ios-checkmark"></span>Bath Rooms: {{ choose_work.room }}</li>
 						    				<li class="check"><span class="ion-ios-checkmark"></span>Luggage</li>
 						    				<li class="check"><span class="ion-ios-checkmark"></span>Garage: 2</li>
 						    			</ul>

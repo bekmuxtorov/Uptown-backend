@@ -63,95 +63,21 @@
 		<section class="ftco-section ftco-agent">
     	<div class="container">
         <div class="row">
+			{% for agent in agents %}
+			  
         	<div class="col-md-3">
         		<div class="agent">
     					<div class="img">
-		    				<img src="{% static 'images/team-1.jpg' %}" class="img-fluid" alt="Colorlib Template">
+		    				<img src="{{ agent.agent_img.url }}" class="img-fluid" alt="{{ agent.agent_name }}">
 	    				</div>
 	    				<div class="desc">
-	    					<h3><a href="{% url 'properties' %}">James Stallon</a></h3>
+	    					<h3><a href="{% url 'properties' %}">{{ agent.agent_name }}</a></h3>
 								<p class="h-info"><span class="location">Listing</span> <span class="details">&mdash; 10 Properties</span></p>
 	    				</div>
     				</div>
         	</div>
-        	<div class="col-md-3">
-        		<div class="agent">
-    					<div class="img">
-		    				<img src="{% static 'images/team-2.jpg' %}" class="img-fluid" alt="Colorlib Template">
-	    				</div>
-	    				<div class="desc">
-	    					<h3><a href="{% url 'properties' %}">James Stallon</a></h3>
-								<p class="h-info"><span class="location">Listing</span> <span class="details">&mdash; 10 Properties</span></p>
-	    				</div>
-    				</div>
-        	</div>
-        	<div class="col-md-3">
-        		<div class="agent">
-    					<div class="img">
-		    				<img src="{% static 'images/team-3.jpg' %}" class="img-fluid" alt="Colorlib Template">
-	    				</div>
-	    				<div class="desc">
-	    					<h3><a href="{% url 'properties' %}">James Stallon</a></h3>
-								<p class="h-info"><span class="location">Listing</span> <span class="details">&mdash; 10 Properties</span></p>
-	    				</div>
-    				</div>
-        	</div>
-        	<div class="col-md-3">
-        		<div class="agent">
-    					<div class="img">
-		    				<img src="{% static 'images/team-4.jpg' %}" class="img-fluid" alt="Colorlib Template">
-	    				</div>
-	    				<div class="desc">
-	    					<h3><a href="{% url 'properties' %}">James Stallon</a></h3>
-								<p class="h-info"><span class="position">Listing</span> <span class="details">&mdash; 10 Properties</span></p>
-	    				</div>
-    				</div>
-        	</div>
-
-        	<div class="col-md-3">
-        		<div class="agent">
-    					<div class="img">
-		    				<img src="{% static 'images/team-5.jpg' %}" class="img-fluid" alt="Colorlib Template">
-	    				</div>
-	    				<div class="desc">
-	    					<h3><a href="{% url 'properties' %}">James Stallon</a></h3>
-								<p class="h-info"><span class="location">Listing</span> <span class="details">&mdash; 10 Properties</span></p>
-	    				</div>
-    				</div>
-        	</div>
-        	<div class="col-md-3">
-        		<div class="agent">
-    					<div class="img">
-		    				<img src="{% static 'images/team-6.jpg' %}" class="img-fluid" alt="Colorlib Template">
-	    				</div>
-	    				<div class="desc">
-	    					<h3><a href="{% url 'properties' %}">James Stallon</a></h3>
-								<p class="h-info"><span class="location">Listing</span> <span class="details">&mdash; 10 Properties</span></p>
-	    				</div>
-    				</div>
-        	</div>
-        	<div class="col-md-3">
-        		<div class="agent">
-    					<div class="img">
-		    				<img src="{% static 'images/team-7.jpg' %}" class="img-fluid" alt="Colorlib Template">
-	    				</div>
-	    				<div class="desc">
-	    					<h3><a href="{% url 'properties' %}">James Stallon</a></h3>
-								<p class="h-info"><span class="location">Listing</span> <span class="details">&mdash; 10 Properties</span></p>
-	    				</div>
-    				</div>
-        	</div>
-        	<div class="col-md-3">
-        		<div class="agent">
-    					<div class="img">
-		    				<img src="{% static 'images/team-8.jpg' %}" class="img-fluid" alt="Colorlib Template">
-	    				</div>
-	    				<div class="desc">
-	    					<h3><a href="{% url 'properties' %}">James Stallon</a></h3>
-								<p class="h-info"><span class="position">Listing</span> <span class="details">&mdash; 10 Properties</span></p>
-	    				</div>
-    				</div>
-        	</div>
+			{% endfor %}
+        	
         </div>
     	</div>
     </section>

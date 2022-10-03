@@ -6,5 +6,5 @@ urlpatterns = [
     path('agent/', views.AgentPagesView, name='agent'),
     path('properties/', views.PropertiesPagesView, name='properties'),
     path('contact/', views.ContactPagesView, name='contact'),
-    path('properties/1/', views.PropertiesSinglePagesView, name='PropertiesSingle'),
+    path('properties/<int:pk>/', views.PropertiesSinglePagesView, name='propertie_single'),
 ]
