@@ -18,3 +18,8 @@ class AdminAgents(admin.ModelAdmin):
     list_display = ['agent_name', 'agent_img', 'date']
 admin.site.register(models.Agents, AdminAgents)
 
+class AdminContact(admin.ModelAdmin):
+    list_display = ['id' ,'name', 'date', 'subject']
+    ordering = ('name', 'date', 'subject')
+admin.site.register(models.Contact, AdminContact)
+

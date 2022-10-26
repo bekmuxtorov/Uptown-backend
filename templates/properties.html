@@ -35,6 +35,11 @@
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="oi oi-menu"></span> Menu
 			</button>
+
+			<form action="" method="post">{% csrf_token %}
+				<input type="text" name="search_word" placeholder="Qidirish...">
+				<input type="submit" value="Qidirish" class="btn btn-primary">
+			  </form>
 			
 			<div class="collapse navbar-collapse" id="ftco-nav">
 				<ul class="navbar-nav ml-auto">
@@ -63,6 +68,8 @@
 	<section class="ftco-section">
 		<div class="container">
 			<div class="row">
+				{% if offer_works %}
+			
 				{% for offer_work in offer_works %}
 				
 				<div class="col-md-4">
@@ -85,6 +92,10 @@
 						</div>
 					</div>
 				{% endfor %}
+				{% else %}
+				<h2>Bizda bunday topshirilgan ish mavjud emas ekan :(</h2>
+				{% endif %}
+
 					
 					
 					
