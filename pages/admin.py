@@ -2,6 +2,10 @@ from django.contrib import admin
 from . import models
 
 # Register your models here.
+class AdminUser(admin.ModelAdmin):
+    list_display = ['first_name', 'username', 'tg_id']
+admin.site.register(models.User, AdminUser)
+
 class AdminOffersWorks(admin.ModelAdmin):
     list_display = ['name', 'old_prize', 'new_prize', 'image', 'date']
 admin.site.register(models.OfferWorks,AdminOffersWorks)

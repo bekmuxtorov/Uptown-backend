@@ -1,6 +1,15 @@
 from django.db import models
 
 # Create your models here.
+class User(models.Model):
+    first_name = models.CharField(max_length=30, verbose_name='Foydalanuvchi ismi:')
+    last_name = models.CharField(max_length=30, verbose_name='Foydalanuvchi familiyasi:', default=' ', null=True)
+    username = models.CharField(max_length=30, verbose_name='Username:')
+    tg_id = models.BigIntegerField(null=True, unique=True, default=1, verbose_name='Telegram id:')
+
+    def __str__(self):
+        return self.first_name
+
 class OfferWorks(models.Model):
     name = models.CharField(max_length=50, verbose_name="Nomi:")
     location = models.CharField(max_length=128, verbose_name="Manzili:")
